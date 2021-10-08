@@ -8,6 +8,6 @@ find_package(ROOT REQUIRED COMPONENTS ROOTVecOps)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 set( CMAKE_INSTALL_LIBDIR ${CMAKE_LIBRARY_OUTPUT_DIRECTORY} )
 
-root_generate_dictionary(G__MRTools MRTools/HelloWorld.hxx LINKDEF LinkDef.h)
-add_library(MRTools SHARED HelloWorld.cxx G__MRTools.cxx)
+root_generate_dictionary(G__MRTools MRTools/DeltaR.hxx LINKDEF LinkDef.h)
+add_library(MRTools SHARED DeltaR.cxx G__MRTools.cxx)
 target_link_libraries(MRTools PUBLIC ROOT::ROOTVecOps)

@@ -6,6 +6,6 @@
 #pragma link off all functions;
 #pragma link C++ nestedclasses;
 
-#pragma link C++ function hello_world;
+#pragma link C++ function DeltaR;
 
 #endif

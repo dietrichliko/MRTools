@@ -1,0 +1,12 @@
+{
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "black",
+    "python.autoComplete.addBrackets": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "/mnt/hephy/cms/dietrich.liko/conda/envs/mrtools-dev/bin/flake8helled",
+    "python.linting.mypyEnabled": true,
+    "C_Cpp.errorSquiggles": "Disabled",
+    "python.analysis.completeFunctionParens": true,
+    "python.defaultInterpreterPath": "/mnt/hephy/cms/dietrich.liko/conda/envs/mrtools-dev/bin/python",
+    "cmake.configureOnEdit": false
+}

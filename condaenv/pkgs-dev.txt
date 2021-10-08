@@ -1,0 +1,6 @@
+cmake
+curl
+cxx-compiler
+poetry
+python=3.9
+root

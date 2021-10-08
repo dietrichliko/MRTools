@@ -1,0 +1,9 @@
+.coverage
+.pytest_cache/
+__pycache__
+*.rootmap
+*.so
+*.pcm
+*.egg-info/
+build/
+dist/

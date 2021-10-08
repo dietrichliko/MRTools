@@ -1,0 +1,154 @@
+# ~/.config/mrtools/mrtools.ini
+#
+# Configuration file for MRTools
+#
+# In path variables following substitusions are possibe. Various
+# bash features are supported. 
+#
+#   ${USER} = username
+#   ${USER:0:1}/${USER} = u/username
+#
+# In addition there is the usual tilde expansion.
+
+[samples_cache]
+# Path to the VOMS proxy on a shared file system
+#
+# voms_proxy_path = "~/private/.proxy"
+
+# Number of threads for samples cache
+#
+# threads = 4
+
+# Path of the sqlite DB to store information on samples
+#
+# The default location is given by $XDG_CACHE_HOME/mrtools/samplesdb
+# If XDG_CACHE_HOME is undefined, the location is ~/.cache/mrtools/samplesdb
+#
+# db_path = ~/.cache/mrtools/samplesdb
+
+# SQL echo statements
+#
+# Can be enabled for debugging
+#
+# db_sql_echo = False
+
+# DB lockfile for NFS cluster
+#
+# The locking in the cluster is based on a symlink to the database file.
+# In case there is a lock, expontial backoff until max_count.
+#
+# lockfile = True
+
+# The actual waiting time is a uniform random number betweeen 0 and 2 * count - 1
+#
+# lockfile_max_count = 6
+
+# If the age of the lockfile exceeds max_age, the lock is assumed to be stale and is
+# removed.
+#
+# lockfile_max_age = 300
+
+# Size of the cache of a ROOT chain in bytes
+#
+# Can be size in bytes or size string
+#
+# root_cache_size ="1G"
+# root_cache_size = 0
+
+# Number of ROOT threads
+#
+# root_threads = 0
+
+[site.CLIP]
+# Domainname for the nodes of the site, used for site identification
+#
+# domains = [ "cbe.vbc.ac.at" ]
+
+# CMS stores its files under this path
+#
+# store_path = "/eos/vbc/experiments/cms"
+
+# Access to files with this path
+#
+# local_prefix = "root://eos.grid.vbc.ac.at/"
+
+# Access to off site files via AAA
+#
+# Only for files under store
+#
+# remote_prefix = "root://xrootd-cms.infn.it/"
+
+# Default for staging
+#
+# stage = True
+
+# Path to file cache
+#
+# file_cache = "/scratch-cbe/users/${USER}/file_cache"
+
+# Size of the file-cache
+#
+# file_cache_size = "250GB"
+
+[site.CERN]
+# Domainname for the nodes of the site, used for site identification
+#
+# domainname = [ "cern.ch" ]
+
+# CMS stores its files under this path
+#
+# store_path = "/eos/cms"
+
+# Access to files with this path
+#
+# local_prefix = "root://eoscms.cern.ch/"
+
+# Access to off site files via AAA
+#
+# Only for files under store
+#
+# remote_prefix = "root://xrootd-cms.infn.it/"
+
+# Default for staging
+#
+# stage = False
+
+# Path to file cache
+#
+# file_cache = "/afs/work/${USER:0:1}/${USER}/file_cache"
+
+# Size of the file-cache
+#
+# file_cache_size = "10GB"
+
+[binaries]
+# In  general binaries are resolved via the PATH variable.
+# In some cases it is required to provide the full path
+
+# dasgoclient (https://github.com/dmwm/dasgoclient)
+#
+# Included in the CMS distribution
+#
+# dasgoclient = "/cvmfs/cms.cern.ch/common/dasgoclient"
+
+# curl (https://curl.se/)
+#
+# The standard curl binary of RHEL7 misses the GSS-API feature
+# Therefore it is necessary to include it in conda environment
+#
+# curl = "<...>/conda/envs/mrtools-dev/bin/curl"
+
+# voms-proxy-info (Part of Grid UI)
+#
+# voms_proxy_info = "/usr/bin/voms-proxy-info"
+
+# voms-proxy-init (Part of Grid UI)
+#
+# voms_proxy_init = "/usr/bin/voms-proxy-init"
+
+# xrdcp (https://xrootd.slac.stanford.edu/doc/man/xrdcp.1.html)
+#
+# Included in the conda installation of ROOT
+#
+# xrdcp = "<...>/conda/envs/mrtools-dev/bin/xrdcp"
+

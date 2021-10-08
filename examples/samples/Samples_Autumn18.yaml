@@ -1,0 +1,230 @@
+# https://raw.githubusercontent.com/HephyAnalysisSW/DeepLepton/2.0/Samples/python/nanoAOD_PFCands_Autumn18.py
+---
+- name: /Autumn18/DY
+  samples:
+  - name: /Autumn18/DY/DYJetsToLL_M50_NLO
+    dasname: /DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/DY/DYJetsToLL_M50_LO
+    dasname: /DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/DY/DYJetsToLL_M10to50_LO
+    dasname: /DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/DY/DYJetsToLL_M4to50_HT70to100_LO
+    dasname: /DYJetsToLL_M-4to50_HT-70to100_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/DY/DYJetsToLL_M4to50_HT100to200_LO
+    dasname: /DYJetsToLL_M-4to50_HT-100to200_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/DY/DYJetsToLL_M4to50_HT200to400_LO
+    dasname: /DYJetsToLL_M-4to50_HT-200to400_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/DY/DYJetsToLL_M4to50_HT400to600_LO
+    dasname: /DYJetsToLL_M-4to50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/DY/DYJetsToLL_M4to50_HT600toInf_LO
+    dasname: /DYJetsToLL_M-4to50_HT-600toInf_TuneCP5_PSWeights_13TeV-madgraphMLM-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/DY/DYJetsToLL_M50_HT70to100_LO
+    dasname: /DYJetsToLL_M-50_HT-70to100_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/DY/DYJetsToLL_M50_HT100to200_LO
+    dasname: /DYJetsToLL_M-50_HT-100to200_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/DY/DYJetsToLL_M50_HT200to400_LO
+    dasname: /DYJetsToLL_M-50_HT-200to400_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/DY/DYJetsToLL_M50_HT400to600_LO
+    dasname: /DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v7_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/DY/DYJetsToLL_M50_HT400to600_LO_ext2
+    dasname: /DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext2-v3_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/DY/DYJetsToLL_M50_HT600to800_LO
+    dasname: /DYJetsToLL_M-50_HT-600to800_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/DY/DYJetsToLL_M50_HT800to1200_LO
+    dasname: /DYJetsToLL_M-50_HT-800to1200_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/DY/DYJetsToLL_M50_HT1200to2500_LO
+    dasname: /DYJetsToLL_M-50_HT-1200to2500_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/DY/DYJetsToLL_M50_HT2500toInf_LO
+    dasname: /DYJetsToLL_M-50_HT-2500toInf_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+- name: /Autumn18/QCD
+  samples:
+  - name: /Autumn18/QCD/QCD_Mu_pt15to20
+    dasname: /QCD_Pt-15to20_MuEnrichedPt5_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v3_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_Mu_pt20to30
+    dasname: /QCD_Pt-20to30_MuEnrichedPt5_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v4_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_Mu_pt30to50
+    dasname: /QCD_Pt-30to50_MuEnrichedPt5_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v3_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_Mu_pt50to80
+    dasname: /QCD_Pt-50to80_MuEnrichedPt5_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v3_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_Mu_pt80to120
+    dasname: /QCD_Pt-80to120_MuEnrichedPt5_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_Mu_pt80to120_ext1
+    dasname: /QCD_Pt-80to120_MuEnrichedPt5_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_Mu_pt120to170
+    dasname: /QCD_Pt-120to170_MuEnrichedPt5_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_Mu_pt120to170_ext1
+    dasname: /QCD_Pt-120to170_MuEnrichedPt5_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_Mu_pt170to300
+    dasname: /QCD_Pt-170to300_MuEnrichedPt5_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v3_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_Mu_pt300to470
+    dasname: /QCD_Pt-300to470_MuEnrichedPt5_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v3_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_Mu_pt300to470_ext1
+    dasname: /QCD_Pt-300to470_MuEnrichedPt5_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext3-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_Mu_pt470to600
+    dasname: /QCD_Pt-470to600_MuEnrichedPt5_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_Mu_pt470to600_ext1
+    dasname: /QCD_Pt-470to600_MuEnrichedPt5_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_Mu_pt600to800
+    dasname: /QCD_Pt-600to800_MuEnrichedPt5_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_Mu_pt800to1000
+    dasname: /QCD_Pt-800to1000_MuEnrichedPt5_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext3-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_Mu_pt1000toInf
+    dasname: /QCD_Pt-1000toInf_MuEnrichedPt5_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_EMEnriched_pt20to30
+    dasname: /QCD_Pt-20to30_EMEnriched_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_EMEnriched_pt30to50
+    dasname: /QCD_Pt-30to50_EMEnriched_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_EMEnriched_pt50to80
+    dasname: /QCD_Pt-50to80_EMEnriched_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_EMEnriched_pt80to120
+    dasname: /QCD_Pt-80to120_EMEnriched_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_EMEnriched_pt120to170
+    dasname: /QCD_Pt-120to170_EMEnriched_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_EMEnriched_pt170to300
+    dasname: /QCD_Pt-170to300_EMEnriched_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_EMEnriched_pt300toInf
+    dasname: /QCD_Pt-300toInf_EMEnriched_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_bcToE_pt15tp20
+    dasname: /QCD_Pt_15to20_bcToE_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_bcToE_pt20to30
+    dasname: /QCD_Pt_20to30_bcToE_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_bcToE_pt30to80
+    dasname: /QCD_Pt_30to80_bcToE_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_bcToE_pt80to170
+    dasname: /QCD_Pt_80to170_bcToE_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_bcToE_pt170to250
+    dasname: /QCD_Pt_170to250_bcToE_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/QCD/QCD_bcToE_pt250toInf
+    dasname: /QCD_Pt_250toInf_bcToE_TuneCP5_13TeV_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+- name: /Autumn18/T
+  samples:
+  - name: /Autumn18/T/ST_schannel_LO
+    dasname: /ST_s-channel_4f_leptonDecays_TuneCP5_13TeV-madgraph-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v4_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/ST_tchannel_antitop_4f_pow
+    dasname: /ST_t-channel_antitop_4f_InclusiveDecays_TuneCP5_13TeV-powheg-madspin-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/ST_tchannel_top_4f_pow
+    dasname: /ST_t-channel_top_4f_InclusiveDecays_TuneCP5_13TeV-powheg-madspin-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/ST_tW_antitop_pow
+    dasname: /ST_tW_antitop_5f_NoFullyHadronicDecays_TuneCP5_13TeV-powheg-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v3_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/ST_tW_top_pow
+    dasname: /ST_tW_top_5f_NoFullyHadronicDecays_TuneCP5_13TeV-powheg-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v3_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/ST_tWll_LO
+    dasname: /ST_tWll_5f_LO_TuneCP5_PSweights_13TeV-madgraph-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/ST_tWnunu_LO
+    dasname: /ST_tWnunu_5f_LO_TuneCP5_PSweights_13TeV-madgraph-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v3_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/TGJets_lep_NLO
+    dasname: /TGJets_leptonDecays_TuneCP5_13TeV-madgraph-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/TT_LO
+    dasname: /TTJets_TuneCP5_13TeV-madgraphMLM-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/TT_dilep_NLO
+    dasname: /TT_DiLept_TuneCP5_13TeV-amcatnlo-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/TTTo2L2Nu_pow
+    dasname: /TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/TTToSemiLeptonic_pow
+    dasname: /TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/TTWJetsToLNu_NLO
+    dasname: /TTWJetsToLNu_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/TTWJetsToQQ_NLO
+    dasname: /TTWJetsToQQ_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/TTZToLLNuNu_M10_NLO
+    dasname: /TTZToLLNuNu_M-10_TuneCP5_13TeV-amcatnlo-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/TTZToLL_M1to10_NLO
+    dasname: /TTZToLL_M-1to10_TuneCP5_13TeV-amcatnlo-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/TTZToQQ_NLO
+    dasname: /TTZToQQ_TuneCP5_13TeV-amcatnlo-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/TZQ_LL_NLO
+    dasname: /tZq_ll_4f_ckm_NLO_TuneCP5_13TeV-madgraph-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/TTWJets_LO
+    dasname: /ttWJets_TuneCP5_13TeV_madgraphMLM_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/TTZJets_LO
+    dasname: /ttZJets_TuneCP5_13TeV_madgraphMLM_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/THQ_Hincl_LO
+    dasname: /THQ_4f_Hincl_13TeV_madgraph_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/THW_Hincl_LO
+    dasname: /THW_5f_Hincl_13TeV_madgraph_pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/TTWW_LO
+    dasname: /TTWW_TuneCP5_13TeV-madgraph-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/TTWZ_LO
+    dasname: /TTWZ_TuneCP5_13TeV-madgraph-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/TTWH_LO
+    dasname: /TTWH_TuneCP5_13TeV-madgraph-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/TTHH_LO
+    dasname: /TTHH_TuneCP5_13TeV-madgraph-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/TTZZ_LO
+    dasname: /TTZZ_TuneCP5_13TeV-madgraph-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events
+  - name: /Autumn18/T/TTTT_NLO
+    dasname: /TTTT_TuneCP5_13TeV-amcatnlo-pythia8/mmoser-crab_RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15_ext1-v2_v6_PFCands-18cc3b9f836d801b107c11978cc04dd0/USER
+    tree_name: Events

@@ -1,0 +1,17 @@
+---
+- name: /NanoAOD/CompressedStop/stop250-dm10
+  title: "m_{t} = 250 GeV/c^{2}, #Delta M = 10 GeV/c^{2}"
+  tree_name: Events
+  directory: /eos/vbc/experiments/cms/store/user/liko/CompStop/SUS-RunIIAutumn18FSPremix-Stop250-dm10-006-nanoAOD
+- name: /NanoAOD/CompressedStop/stop250-dm20
+  title: "m_{t} = 250 GeV/c^{2}, #Delta M = 20 GeV/c^{2}"
+  tree_name: Events
+  directory: /eos/vbc/experiments/cms/store/user/liko/CompStop/SUS-RunIIAutumn18FSPremix-Stop250-dm20-006-nanoAOD
+- name: /NanoAOD/CompressedStop/stop600-dm10
+  title: "m_{t} = 600 GeV/c^{2}, #Delta M = 10 GeV/c^{2}"
+  tree_name: Events
+  directory: /eos/vbc/experiments/cms/store/user/liko/CompStop/SUS-RunIIAutumn18FSPremix-Stop600-dm10-006-nanoAOD
+- name: /NanoAOD/CompressedStop/stop600-dm20
+  title: "m_{t} = 600 GeV/c^{2}, #Delta M = 20 GeV/c^{2}"
+  tree_name: Events
+  directory: /eos/vbc/experiments/cms/store/user/liko/CompStop/SUS-RunIIAutumn18FSPremix-Stop600-dm20-006-nanoAOD

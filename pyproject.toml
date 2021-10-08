@@ -1,0 +1,72 @@
+[tool.poetry]
+name = "mrtools"
+version = "0.1.0"
+description = ""
+authors = ["Dietrich Liko <Dietrich.Liko@oeaw.ac.at>"]
+build = "build.py"
+include = [ "src/cxx/**" ]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+click = "^8.0.1"
+tomli = "^1.2.1"
+datasize = "^1.0.0"
+expandvars = "^0.7.0"
+PyYAML = "^5.4.1"
+SQLAlchemy = "^1.4.25"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+isort = "^5.9.3"
+black = "^21.9b0"
+mypy = "^0.910"
+flake8 = "^3.9.2"
+flake8-bugbear = "^21.9.1"
+flakehell = "^0.9.0"
+coverage = {extras = ["toml"], version = "^5.5"}
+pytest-cov = "^2.12.1"
+pytest-mock = "^3.6.1"
+types-PyYAML = "^5.4.10"
+sqlalchemy-stubs = "^0.4"
+
+[tool.poetry.scripts]
+example_clicklog = "examples.example_clicklog:main"
+example01 = "examples.example01:main"
+example02 = "examples.example02:main"
+
+[tool.flakehell]
+# https://flakehell.readthedocs.io/
+# https://black.readthedocs.io/en/stable/guides/using_black_with_other_tools.html#black-compatible-configurations
+max-line-length = 88
+# https://github.com/flakehell/flakehell/issues/10#issuecomment-822720074
+extended_default_ignore = []  # add this
+
+[tool.flakehell.plugins]
+pyflakes = ["+*"]
+pycodestyle = ["+*", "-E203", "-E501", "-W503"]
+pylint = ["+*"]
+mccabe = ["+*"]
+flake8-bugbear=["+*", "+B950"]
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.run]
+branch = true
+source = ["src/mrtools"]
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.mypy]
+files = "src/mrtools"
+# https://github.com/dropbox/sqlalchemy-stubs
+plugins = "sqlmypy"
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "wheel"]
+build-backend = "poetry.core.masonry.api"

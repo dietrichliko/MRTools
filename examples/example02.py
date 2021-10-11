@@ -36,7 +36,9 @@ class EX02Analyzer(mrtools.DFAnalyzer):
 
         df = (
             df.Define("good_Muon", "Muon_pt > 5 && abs(Muon_eta) < 2.")
-            .Define("good_nMuons", "count(good_Muon)")
+            .Define(
+                "good_nMuon", "std::count(good_Muon.begin(), good_Muon.end(), true)"
+            )
             .Define("good_Muon_pt", "Muon_pt[good_Muon]")
             .Define("good_Muon_eta", "Muon_eta[good_Muon]")
             .Define("good_Muon_phi", "Muon_phi[good_Muon]")
@@ -45,10 +47,10 @@ class EX02Analyzer(mrtools.DFAnalyzer):
         # Define good Jets
         df = (
             df.Define("good_Jet", "Jet_pt > 1")
-            .Define("good_nJets", "count(good_Jet)")
-            .Define("good_Jet_pt", "Muon_pt[good_Jet]")
-            .Define("good_Jet_eta", "Muon_eta[good_Jet]")
-            .Define("good_Jet_phi", "Muon_phi[good_Jet]")
+            .Define("good_nJet", "std::count(good_Jet.begin(), good_Jet.end(), true)")
+            .Define("good_Jet_pt", "Jet_pt[good_Jet]")
+            .Define("good_Jet_eta", "Jet_eta[good_Jet]")
+            .Define("good_Jet_phi", "Jet_phi[good_Jet]")
         )
 
         # Calculate DeltaR

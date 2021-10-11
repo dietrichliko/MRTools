@@ -4,6 +4,7 @@ __pycache__
 *.rootmap
 *.so
 *.pcm
+*.root
 *.egg-info/
 build/
 dist/

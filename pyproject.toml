@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["Dietrich Liko <Dietrich.Liko@oeaw.ac.at>"]
 build = "build.py"
-include = [ "src/cxx/**" ]
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -14,6 +13,8 @@ datasize = "^1.0.0"
 expandvars = "^0.7.0"
 PyYAML = "^5.4.1"
 SQLAlchemy = "^1.4.25"
+pathmatch = "^0.2.2"
+quantiphy = "^2.15.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

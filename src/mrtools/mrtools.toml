@@ -59,6 +59,10 @@
 #
 # root_threads = 0
 
+# XRDCP retry during staging
+#
+# xrdcp_retry = 3
+
 [site.CLIP]
 # Domainname for the nodes of the site, used for site identification
 #

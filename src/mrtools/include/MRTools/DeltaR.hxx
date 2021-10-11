@@ -1,4 +1,4 @@
-#ifndef __MRTools__DELTAR__
+#ifndef __MRTOOLS__DELTAR__
 #define __MRTOOLS__DELTAR__
 
 #include "ROOT/RVec.hxx"

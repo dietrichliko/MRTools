@@ -1,0 +1,80 @@
+---
+Histo1D:
+  - name: nMuon
+    title: Number of all muons
+    bins: [16, -0.5, 15.5]
+    xlabel: "# Muons"
+    logy: True
+    normalize: True
+  - name: Muon_pt
+    title: Transverse momentum of all muons
+    bins: [100, 0., 100.]
+    xlabel: "p_{T} [GeV/c]"
+    logy: True
+    normalize: True
+  - name: Muon_eta
+    title: Rapidity of all muons
+    bins: [100, -3.5, 3.5]
+    xlabel: "#eta"
+    logy: True
+    normalize: True
+  - name: good_nMuon
+    title: Number of good muons
+    bins: [16, -0.5, 15.5]
+    xlabel: "# Muons"
+    logy: True
+    normalize: True
+  - name: good_Muon_pt
+    title: Traverse momentum of good muons
+    bins: [100, 0., 100.]
+    xlabel: "p_{T} [GeV/c]"
+    logy: True
+    normalize: True
+  - name: good_Muon_eta
+    title: Rapidity of good muons
+    bins: [100, -3.5, 3.5]
+    xlabel: "#eta"
+    logy: True
+    normalize: True
+  - name: nJet
+    title: Number of all jets
+    bins: [16, -0.5, 15.5]
+    xlabel: "# Jets"
+    logy: True
+    normalize: True
+  - name: Jet_pt
+    title: Transverse momentum of all jets
+    bins: [100, 0., 100.]
+    xlabel: "p_{T} [GeV/c]"
+    logy: True
+    normalize: True
+  - name: Jet_eta
+    title: Rapidity of all jets
+    bins: [100, -3.5, 3.5]
+    xlabel: "#eta"
+    logy: True
+    normalize: True
+  - name: good_nJet
+    title: Number of good Jets
+    bins: [16, -0.5, 15.5]
+    xlabel: "# Jets"
+    logy: True
+    normalize: True
+  - name: good_Jet_pt
+    title: Traverse momentum of good Jets
+    bins: [100, 0., 100.]
+    xlabel: "p_{T} [GeV/c]"
+    logy: True
+    normalize: True
+  - name: good_Jet_eta
+    title: Rapidity of good Jets
+    bins: [100, -3.5, 3.5]
+    xlabel: "#eta"
+    logy: True
+    normalize: True
+  - name: MuonJet_DR
+    title: "Muon - Jet #Delta R"
+    bins: [100, 0., 3.14]
+    xlabel: "#Delta R"
+    logy: True
+    normalize: True

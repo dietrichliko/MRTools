@@ -8,5 +8,6 @@
     "C_Cpp.errorSquiggles": "Disabled",
     "python.analysis.completeFunctionParens": true,
     "python.defaultInterpreterPath": "/mnt/hephy/cms/dietrich.liko/conda/envs/mrtools-dev/bin/python",
-    "cmake.configureOnEdit": false
+    "cmake.configureOnEdit": false,
+    "cmake.configureOnOpen": false
 }

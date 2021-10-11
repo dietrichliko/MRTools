@@ -1,8 +1,5 @@
 import os
 import subprocess
-import sys
-import sysconfig
-import platform
 import pathlib
 from typing import Any, Dict
 
@@ -36,7 +33,7 @@ class ExtensionBuilder(build_ext):
         ]
         if len(cmake_extensions) > 0:
             try:
-                out = subprocess.check_output(["cmake", "--version"])
+                subprocess.check_call(["cmake", "--version"])
             except OSError:
                 raise RuntimeError(
                     "CMake must be installed to build the following extensions: "
@@ -106,7 +103,7 @@ class ExtensionBuilder(build_ext):
 
 def build(setup_kwargs: Dict[str, Any]) -> None:
 
-    ext_modules = [CMakeROOTDictExtension("mrtools.MRTools", sourcedir="src/cxx")]
+    ext_modules = [CMakeROOTDictExtension("mrtools.MRTools", sourcedir="src/mrtools/cxx")]
     setup_kwargs.update(
         {
             "ext_modules": ext_modules,

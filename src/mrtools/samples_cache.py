@@ -1,34 +1,37 @@
 import collections
 import concurrent.futures as futures
 import contextlib
-import itertools
+import importlib.metadata
 import logging
 import os
 import pathlib
 import subprocess
 from types import TracebackType
-from typing import IO, Any, Dict, Iterable, Iterator, List, Optional, Text, Type, Union
+from typing import IO, Any, Dict, List, Optional, Text, Type, Union
 
+import ROOT  # type: ignore
 import yaml
 from typing_extensions import Literal
-import ROOT  # type: ignore
+from datasize import DataSize
 
 from mrtools.config import Configuration
-from mrtools.exceptions import MRTError
-from mrtools.samples import Sample, SampleABC, SampleFromDAS, SampleFromFS, SampleGroup
-
 from mrtools.db import DBEngine
+from mrtools.exceptions import MRTError
+from mrtools.samples import (
+    File,
+    Sample,
+    SampleABC,
+    SampleFromDAS,
+    SampleFromFS,
+    SampleGroup,
+    samples_flatten,
+)
 
 PathOrStr = Union[pathlib.Path, str]
 
 log = logging.getLogger(__package__)
 
 config = Configuration()
-
-
-def samples_iter(samples: Iterable[SampleABC]) -> Iterator[Sample]:
-
-    return itertools.chain.from_iterable(s.samples.values() for s in samples)
 
 
 class SamplesCache(contextlib.AbstractContextManager):
@@ -50,6 +53,7 @@ class SamplesCache(contextlib.AbstractContextManager):
         check_proxy: bool = True,
         proxy_valid: int = 24,
         db_path: Optional[PathOrStr] = None,
+        welcome: bool = True,
     ) -> None:
 
         self.refresh = refresh
@@ -57,11 +61,21 @@ class SamplesCache(contextlib.AbstractContextManager):
         self.threads = config.sc.threads if threads is None else threads
         root_threads = config.sc.root_threads if root_threads is None else root_threads
 
+        if welcome:
+            log.info(
+                "Modern ROOT Tools for CMS Analysis, Version %s",
+                importlib.metadata.version(__package__),
+            )
+
         ROOT.gROOT.SetBatch()
         ROOT.PyConfig.IgnoreCommandLineOptions = True
         ROOT.EnableImplicitMT(root_threads)
 
-        ROOT.gSystem.Load(str(pathlib.Path(__file__).parent / "libMRTools.so"))
+        pkg_dir = pathlib.Path(__file__).parent
+        ROOT.gSystem.Load(str(pkg_dir / "libMRTools.so"))
+
+        ROOT.gSystem.AddIncludePath(" -I{}/cxx/include")
+        ROOT.gROOT.ProcessLine("#include MRTOOLS/Helpers.hxx")
 
         if check_proxy:
             voms_proxy_init(config.sc.voms_proxy_path, proxy_valid)
@@ -102,10 +116,10 @@ class SamplesCache(contextlib.AbstractContextManager):
         with self.engine.session() as session:
 
             if self.refresh:
-                samples_to_get = list(samples_iter(samples))
+                samples_to_get = list(samples_flatten(samples))
             else:
                 samples_to_get = []
-                for sample in samples_iter(samples):
+                for sample in samples_flatten(samples):
                     db_sample = session.read_sample(str(sample))
                     if db_sample is None:
                         samples_to_get.append(sample)
@@ -141,6 +155,12 @@ class SamplesCache(contextlib.AbstractContextManager):
             for sample in samples_to_get:
                 session.write_sample(sample)
 
+        log.info(
+            "#Samples: %d, #Files: %d, Size: %s",
+            sum(s.samples_len() for s in samples),
+            sum(len(s) for s in samples),
+            "{0:.2a}".format(DataSize(sum(s.size for s in samples))),
+        )
         return samples
 
     @staticmethod
@@ -193,6 +213,30 @@ class SamplesCache(contextlib.AbstractContextManager):
                 )
 
         return samples
+
+    def faux_stage(self, samples: List[SampleABC]) -> None:
+
+        #        size = sum(s.size for s in samples)
+
+        with futures.ThreadPoolExecutor(max_workers=self.threads) as executor:
+            f_to_file: Dict[futures.Future, File] = {}
+            for sample in samples:
+                f_to_file |= {
+                    executor.submit(file.faux_stage): file
+                    for file in sample.files_iter(self.remote)
+                }
+            for future in futures.as_completed(f_to_file):
+                if future.cancelled():
+                    continue
+                file = f_to_file[future]
+                if (exception := future.exception()) is not None:
+                    log.error(
+                        "faux_stage for %s raised exceptions %s",
+                        file,
+                        exception,
+                    )
+                    executor.shutdown(wait=True, cancel_futures=True)
+                    raise MRTError("Error during staging")
 
 
 def voms_proxy_init(

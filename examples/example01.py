@@ -2,6 +2,8 @@ import pathlib
 from typing import Any, Dict, List
 import logging
 
+import ROOT
+
 import mrtools
 import mrtools.clicklog as clicklog
 
@@ -35,8 +37,8 @@ SAMPLES = """---
 """
 
 
-class EX02Analyzer(mrtools.DFAnalyzer):
-    def samples(
+class EX01Analyzer(mrtools.DFAnalyzer):
+    def define_samples(
         self, sc: mrtools.SamplesCache, options: Dict[str, Any]
     ) -> List[mrtools.SampleABC]:
 
@@ -44,9 +46,10 @@ class EX02Analyzer(mrtools.DFAnalyzer):
 
     def setup(self, df: DataFrame, sample: str, options: Dict[str, Any]) -> None:
 
+        count = "std::count({0}.begin(),{0}.end(),true)"
         df = (
             df.Define("good_Muon", "Muon_pt > 5 && abs(Muon_eta) < 2.")
-            .Define("good_nMuons", "count(good_Muon)")
+            .Define("good_nMuon", count.format("good_Muon"))
             .Define("good_Muon_pt", "Muon_pt[good_Muon]")
             .Define("good_Muon_eta", "Muon_eta[good_Muon]")
             .Define("good_Muon_phi", "Muon_phi[good_Muon]")
@@ -55,29 +58,33 @@ class EX02Analyzer(mrtools.DFAnalyzer):
         # Define good Jets
         df = (
             df.Define("good_Jet", "Jet_pt > 1")
-            .Define("good_nJets", "count(good_Jet)")
-            .Define("good_Jet_pt", "Muon_pt[good_Jet]")
-            .Define("good_Jet_eta", "Muon_eta[good_Jet]")
-            .Define("good_Jet_phi", "Muon_phi[good_Jet]")
+            .Define("good_nJet", count.format("good_Jet"))
+            .Define("good_Jet_pt", "Jet_pt[good_Jet]")
+            .Define("good_Jet_eta", "Jet_eta[good_Jet]")
+            .Define("good_Jet_phi", "Jet_phi[good_Jet]")
         )
 
         # Calculate DeltaR
-        df = df.Define(
-            "MuonJet_DR",  # variable to be defined
-            "DeltaR(good_Muon_eta,good_Jet_eta,good_Muon_phi,good_Jet_phi)",  # DeltaR signature
+        # df = df.Define(
+        #     "MuonJet_DR", "DeltaR(good_Muon_eta,good_Jet_eta,good_Muon_phi,good_Jet_phi)"
+        # )
+        df = ROOT.DefineDeltaR(
+            df,
+            "MuonJet_DR",
+            ["good_Muon_eta", "good_Jet_eta", "good_Muon_phi", "good_Jet_phi"],
         )
 
         # load histrogram definitions
         dir = pathlib.Path(__file__).parent
-        self.histos_load(df, sample, dir / "example02.yaml")
+        self.histos_load(df, sample, dir / "example01.yaml")
 
 
 def main():
 
     config.init()
-    analyzer = EX02Analyzer()
+    analyzer = EX01Analyzer()
 
-    cli = mrtools.AnalyzerCli(analyzer)
+    cli = mrtools.AnalyzerCli(analyzer, pathlib.Path(__file__).stem)
     cli.run()
 
 

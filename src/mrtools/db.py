@@ -6,6 +6,7 @@ import time
 from types import TracebackType
 from typing import Dict, Optional, Type, Union
 
+from datasize import DataSize
 import typing_extensions
 from sqlalchemy import (
     Boolean,
@@ -42,16 +43,16 @@ class DBFile(Base):
     directory = relationship("DBDirectory")
     sample_id = Column(Integer, ForeignKey("sample.id"))
     sample = relationship("DBSample", back_populates="files")
-    status = Column(Enum(FileFlags.Status))
-    location = Column(Enum(FileFlags.Location))
-    stage_status = Column(Enum(FileFlags.StageStatus))
+    status = Column(Enum(FileFlags.Status), nullable=False)
+    location = Column(Enum(FileFlags.Location), nullable=False)
+    stage_status = Column(Enum(FileFlags.StageStatus), nullable=False)
     size = Column(Integer)
     entries = Column(Integer)
     checksum = Column(Integer)
 
     def __repr__(self) -> str:
 
-        r = f"DBFile(id={self.id:08X)}, name={self.name!r}"
+        r = f"DBFile(id={self.id:08X}, name={self.name!r}"
         if self.directory_id is None:
             r += ", directory=None"
         else:
@@ -61,11 +62,11 @@ class DBFile(Base):
         else:
             r += f", sample={self.sample_id:08X}"
         if self.size is not None:
-            r += f", size={self.size!r}"
+            r += f", size={DataSize(self.size):.2a}"
         if self.entries is not None:
-            r += f", size={self.entries!r}"
+            r += f", entries={self.entries!r}"
         if self.checksum is not None:
-            r += f", size={self.checksum:08X}"
+            r += f", checksum={self.checksum:08X}"
 
         return r + ")"
 
@@ -368,6 +369,9 @@ class DBSession:
             except KeyError:
                 db_file = DBFile(
                     name=file._name,
+                    status=file._flags.status,
+                    location=file._flags.location,
+                    stage_status=file._flags.stage_status,
                     size=file._size,
                     entries=file._entries,
                     checksum=file._checksum,
@@ -397,7 +401,6 @@ class DBEngine:
 
     def __init__(self, path: PathOrStr, echo: bool = False) -> None:
 
-        print("DB Path", path)
         if path == "":
             self.engine = create_engine(
                 "sqlite+pysqlite:///",

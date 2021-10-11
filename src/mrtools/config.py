@@ -101,6 +101,7 @@ class Configuration(metaclass=SingletonMetaClass):
         store_path: str
         local_prefix: str
         remote_prefix: str
+        file_cache_path: pathlib.Path
         stage: bool
 
         def __init__(self, config_data: Dict[str, Any], site: str = "") -> None:
@@ -114,7 +115,7 @@ class Configuration(metaclass=SingletonMetaClass):
                 domain = domainname()
                 try:
                     site = domain_to_site[domain]
-                    log.info('Site "%s" for domain %s', site, domain)
+                    log.debug('Site "%s" for domain %s', site, domain)
                 except KeyError:
                     raise MRTError(f"Could not determine site for {domain}")
 
@@ -136,6 +137,7 @@ class Configuration(metaclass=SingletonMetaClass):
         threads: int
         root_threads: int
         root_cache_size: DataSize
+        xrdcp_retry: int
         db_path: pathlib.Path
         db_sql_echo: bool
         lockfile: bool
@@ -150,6 +152,7 @@ class Configuration(metaclass=SingletonMetaClass):
             self.threads = cast(int, config_data.get("threads", 4))
             self.root_threads = cast(int, config_data.get("root_threads", 0))
             self.root_cache_size = DataSize(config_data.get("root_cache_size", 0))
+            self.xrdcp_retry = cast(int, config_data.get("xrdcp_retry", 3))
             default_db_path = os.path.join(
                 os.environ.get("XDG_CACHE_HOME", "~/.cache"), "mrtools/sample.db"
             )
